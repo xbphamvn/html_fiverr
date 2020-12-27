@@ -1,0 +1,37 @@
+//Helper
+@import './Helpers/variables';
+@import './Helpers/mixin';
+@import './Helpers/extend';
+
+//Vendors
+
+//Base
+@import './Base/reset';
+@import './Base/customize';
+
+//Layouts
+@import './Layouts/header';
+@import './Layouts/cover';
+@import './Layouts/intro';
+@import './Layouts/services';
+@import './Layouts/getWork';
+@import './Layouts/marketplace';
+@import './Layouts/projects';
+@import './Layouts/testominials';
+@import './Layouts/midhomeBanner';
+@import './Layouts/tools';
+@import './Layouts/fiverrguides';
+@import './Layouts/getStarted';
+@import './Layouts/footer';
+
+//Components
+@import './Components/button';
+@import './Components/cover';
+@import './Components/card';
+@import './Components/backToTop';
+@import './Components/sectionListAndImg';
+
+//Pages
+@import './Pages/home';
+
+//Theme

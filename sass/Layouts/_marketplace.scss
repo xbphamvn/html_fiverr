@@ -1,0 +1,50 @@
+.marketplace {
+    padding-top: $pd-8;
+    .marketplace__content {
+        margin: 0 $mg-5;
+        .marketplace__detail {
+            margin: 0 auto;
+            padding-top: $pd-7;
+            .marketplace__items {
+                height: 145px;
+                .marketplace__link {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    text-align: center;
+                    text-decoration: none;
+                    color: $color-black-0;
+                    .marketplace__icon {
+                        margin: 0 auto $mg-2 - 5;
+                        height: 48px;
+                        width: 48px;
+                        position: relative;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -8px;
+                            left: 0;
+                            background-color: $color-gray-1;
+                            height: 2px;
+                            width: 100%;
+                            transition: all .5s;
+                        }
+                    }
+                    & > p {
+                        margin-bottom: 0;
+                    }
+                    &:hover {
+                        .marketplace__icon {
+                            &::after {
+                                width: 160%;
+                                background-color: $color-green-0;
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

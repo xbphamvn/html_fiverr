@@ -1,0 +1,41 @@
+.listAndImg__content {
+    margin: 0 $mg-5;
+    .listAndImg__items {
+        position: relative;
+        padding-bottom: $pd-4 + 4;
+        & > h3 {
+            @include styleText($color-black-0, $fs-2 - 1, $fw-3);
+            padding-left: $pd-4 + 5;
+        }
+        .listAndImg__icon {
+            display: block;
+            text-align: center;
+            height: 16px;
+            width: 16px;
+            line-height: 13px;
+            border-radius: 50%;
+            border: 2px solid $color-green-1;
+            color: $color-green-1;
+            font-size: 8px;
+            position: absolute;
+            top: 2px;
+        }
+        & > p:last-of-type {
+            color: $color-black-1;
+        }
+    }
+    .listAndImg__video-modal {
+        position: relative;
+        width: fit-content;
+        img {
+            width: 100%;
+            max-width: 647px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .listAndImg__video-btn {
+            @include buttonPlay();
+        }
+    }
+}

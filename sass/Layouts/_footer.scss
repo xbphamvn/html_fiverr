@@ -1,0 +1,95 @@
+.footer {
+    padding-top: 64px;
+    padding-bottom: 24px;
+    .footer__top {
+        margin: 0 $mg-5;
+        .footer__top--items {
+            padding: 0 0 $pd-7 0;
+            &>p:first-of-type {
+                @include styleText($color-black-0, $fs-0 + 2, $fw-3);
+            }
+            .footer__links>a {
+                display: inline-block;
+                color: $color-black-9;
+                &>span {
+                    display: block;
+                    @include styleText($color-black-3, $fs-1 - 1, $fw-2);
+                    height: 24px;
+                    padding-top: $pd-6 - 1;
+                }
+            }
+        }
+        &::after {
+            background-color: $color-gray-6;
+            content: "";
+            height: 1px;
+            width: 100%;
+            margin-bottom: $mg-3 - 2;
+        }
+    }
+    .footer__bottom {
+        margin: 0 $mg-5;
+        height: 53px;
+        .footer__bottom--left {
+            padding: 0;
+            &>img {
+                padding-top: $pd-2;
+                padding-right: $pd-4 + 4;
+            }
+            &>span {
+                @include styleText($color-black-3, $fs-1 - 1, $fw-2);
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        .footer__bottom--right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0;
+            a {
+                text-decoration: none;
+                color: $color-black-9;
+                fill: $color-black-9;
+                &>i {
+                    margin-right: $mg-2;
+                    border: 1px solid transparent;
+                    height: 32px;
+                    width: 32px;
+                    border-radius: 50%;
+                    font-size: $fs-2;
+                    text-align: center;
+                    line-height: $line-height-2 + 3;
+                    transition: all .5s;
+                }
+                &:hover {
+                    &>i {
+                        background-color: $color-gray-7;
+                        border-color: $color-gray-7;
+                    }
+                }
+            }
+            .footer__bottom--text {
+                &>a {
+                    &>span {
+                        font-size: $fs-1 - 1;
+                        font-weight: $fw-3;
+                        padding: $pd-0 + 1 $pd-2;
+                        border: 1px solid transparent;
+                        border-radius: 18px;
+                        transition: all .5s;
+                    }
+                    &:hover {
+                        &>span {
+                            color: $color-black-0;
+                            fill: $color-black-0;
+                            border-color: $color-gray-8;
+                            background-color: $color-gray-8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

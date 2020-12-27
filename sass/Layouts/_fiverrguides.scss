@@ -1,0 +1,36 @@
+.fiverrguides {
+    padding-top: $pd-8;
+    .fiverrguides__content {
+        margin: 0 $mg-5;
+        .fiverrguides__title {
+            @include titleAndLink();
+        }
+        .fiverrguides__detail {
+            justify-content: space-around;
+            .fiverrguides__items {
+                margin-bottom: $mg-2;
+                a {
+                    text-decoration: none;
+                    &>img {
+                        width: 100%;
+                        padding-bottom: $pd-3 + 1;
+                        transition: all .5s;
+                        &:hover {
+                            opacity: .85;
+                        }
+                    }
+                    &>h5 {
+                        @include styleText($color-black-1, $fs-2 - 1, $fw-3);
+                        padding-top: $pd-0 - 2;
+                        padding-bottom: 2px;
+                        margin-bottom: 0;
+                    }
+                    &>p {
+                        color: $color-black-1;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

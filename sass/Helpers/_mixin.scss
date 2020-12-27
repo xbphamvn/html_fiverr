@@ -1,0 +1,138 @@
+@mixin styleText($color, $fs, $fw) {
+  color: $color;
+  font-size: $fs;
+  font-weight: $fw;
+}
+
+@mixin styleButton($color, $bg-color, $border, $border-radius, $fs, $fw, $pd-y, $pd-x) {
+  color: $color;
+  background-color: $bg-color;
+  border: 1px solid $border;
+  border-radius: $border-radius;
+  font-size: $fs;
+  font-weight: $fw;
+  padding: $pd-y $pd-x;
+  line-height: normal;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+@mixin hoverButton($color, $bg-color, $border) {
+  color: $color;
+  background-color: $bg-color;
+  border: 1px solid $border;
+}
+
+@mixin styleSearchForm($bd-radius-all, $ctrl-height, $pd-all, $pd-r, $bd-radius-ctrl, $fs-inner, $pd-icon-left, $bd-radius-btn, $pd-btn, $fs-btn) {
+  .input-group {
+    position: relative;
+    border-radius: $bd-radius-all;
+    .form-control {
+      display: inline-block;
+      height: $ctrl-height;
+      padding: $pd-all $pd-all $pd-all $pd-r;
+      border-radius: $bd-radius-ctrl 0 0 $bd-radius-ctrl;
+      border-color: $color-gray-3;
+      font-size: $fs-inner;
+      border-right: transparent;
+      &:focus {
+        box-shadow: none;
+        border-color: $color-gray-0;
+      }
+    }
+    .form-search--icon {
+      position: absolute;
+      top: 50%;
+      left: $pd-icon-left;
+      color: $color-gray-0;
+      font-size: $fs-inner;
+      transform: translateY(-50%);
+      z-index: 50;
+    }
+  }
+  .input-group-append {
+    .input-group-text {
+      color: $color-white-0;
+      font-size: $fs-btn;
+      font-weight: $fw-3;
+      padding-left: $pd-btn;
+      padding-right: $pd-btn;
+      padding-bottom: $pd-6;
+      border-radius: 0 $bd-radius-btn $bd-radius-btn 0;
+      background-color: $color-green-0;
+      border-color: $color-green-0;
+      transition: all 0.5s;
+      &:hover {
+        background-color: $color-green-1;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@mixin buttonPlay() {
+  background-color: $color-black-8;
+    height: 80px;
+    width: 80px;
+    line-height: 80px;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    transition: all .5s;
+    &>i {
+        color: $color-white-0;
+        font-size: $fs-3 - 4;
+        align-self: center;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        transition: all .5s;
+    }
+    &:hover {
+        background-color: $color-white-1;
+        cursor: pointer;
+        &>i{
+            color: yellowgreen;
+        }
+    }
+}
+
+@mixin carouselBoxShadow() {
+  box-shadow: 0 1px 5px 1px $color-black-5;
+}
+
+@mixin titleAndLink() {
+  padding: 0 $pd-3 + 1;
+    & > h2 {
+    flex-grow: 10;
+    }
+    & > a {
+    text-decoration: none;
+    text-align: right;
+    align-items: flex-end;
+    padding-top: $pd-2;
+    margin-left: $mg-2;
+    color: $color-blue-0;
+    &:hover {
+        color: $color-blue-0;
+      }
+    }
+}
+
+@mixin responsive($screen) {
+  @if map-has-key($map: $breakpoints, $key: $screen) {
+    $value: map-get(
+      $map: $breakpoints,
+      $key: $screen,
+    );
+    @media screen and (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "`{$screen}` isn't valid in breakpoints";
+  }
+}

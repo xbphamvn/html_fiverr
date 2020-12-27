@@ -1,0 +1,34 @@
+/* Back to Top */
+
+.backToTop {
+  visibility: hidden;
+  opacity: 0;
+}
+.additionalCategories {
+  visibility: hidden;
+  transform: rotateX(90deg);
+  opacity: 0;
+  width: 90%;
+}
+
+.backToTopButton {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top-btn--is-visible {
+  visibility: visible;
+  @include styleButton($color-green-0, transparent, $color-green-0, $border-radius-0, $fs-1 - 1, $fw-3, $pd-0 - 1, $pd-4 - 2);
+}
+
+.cd-top-add--is-visible {
+  visibility: visible;
+  opacity: 1;
+  transform: rotateX(0deg);
+  width: 100%;
+}

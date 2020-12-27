@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("./fonts/proxima_nova_light.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("./fonts/proxima_nova_regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("./fonts/proxima_nova_bold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("./fonts/helveticaneue_light.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("./fonts/helveticaneue_medium.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("./fonts/helveticaneue_bold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    // box-sizing: border-box;
+}
+
+body {
+    font-family: "Proxima Nova", "Helvetica Neue", Arial, sans-serif;
+    font-size: $fs-0;
+    line-height: $line-height-0;
+    color: $color-black-0;
+    background-color: $color-white-0;
+}
+
+h2 {
+    @include styleText($color-black-0, $fs-4 + 2, $fw-3);
+    padding-top: $pd-0;
+    padding-bottom: $pd-4 + 4;
+    margin-bottom: 0;
+    line-height: $line-height-2 - 1;
+}
+
+::selection {
+    background: $color-gray-2;
+    color: $color-white-0;
+    text-shadow: none;
+}

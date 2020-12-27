@@ -1,0 +1,68 @@
+.card--services {
+    position: relative;
+    background-color: transparent;
+    .card__img {
+        object-fit: cover;
+        border-radius: $border-radius-1 + 1;
+        transition: opacity .3s ease-in-out;
+        &:hover {
+            opacity: .85;
+            cursor: pointer;
+        }
+    }
+    .card__text {
+        position: absolute;
+        top: $pd-3;
+        left: $pd-3;
+        font-size: $fs-0;
+        color: $color-white-0;
+        &>h4 {
+            font-size: $fs-2 + 3;
+            font-weight: $fw-3;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.card--projects {
+    @include carouselBoxShadow();
+    // box-shadow: 0 1px 5px 1px $color-black-5;
+    border-radius: $border-radius-2;
+    margin: 0 $mg-4 $mg-1 $mg-4;
+    .project__card--img {
+        height: 237px;
+        width: 100%;
+        border-radius: $border-radius-2 $border-radius-2 0 0;
+        transition: all .5s;
+        &:hover { //insert a link
+            opacity: .85;
+            cursor: pointer;
+        }
+    }
+    .card__profile {
+        display: flex;
+        padding: $pd-4 0 $pd-3 $pd-4;
+        & a{
+            text-decoration: none;
+            color: $color-black-2;
+            &>img {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+            }
+        }
+        .card__text {
+            padding-left: $pd-2;
+            h5 {
+                @include styleText($color-black-2, $fs-1 - 1, $fw-3);
+            }
+            p {
+                font-size: $fs-1 - 1;
+                line-height: $line-height-1 + 2;
+            }
+            span {
+                font-style: italic;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.midhomeBanner {
+    padding-top: $pd-8;
+    .midhomeBanner__content {
+        margin: 0 $mg-5;
+        min-height: 300px;
+        background: url("../img/banner/pro_banner_1400px-2x.jpg") center/cover no-repeat;
+        display: flex;
+        .midhomeBanner__items {
+            align-self: center;
+            padding-left: 5%;
+            width: 40%;
+            .midhomeBanner__fiverrPro {
+                @include styleText($color-white-0, $fs-1, $fw-2);
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -3px;
+                    height: 22px;
+                    width: 100%;
+                    background: 5.5px no-repeat url("../img/logo/pro-logo.svg");
+                    background-size: 100px auto;
+                }
+            }
+            h3 {
+                @include styleText($color-white-0, $fs-4 + 3, $fw-1);
+                padding-bottom: $pd-5;
+            }
+            @include responsive("large") {
+                .midhomeBanner__fiverrPro {
+                    font-size: 1.5vw;
+                }
+                h3 {
+                    font-size: 2vw;
+                }
+            }
+        }
+        
+    }
+}

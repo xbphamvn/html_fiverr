@@ -1,0 +1,21 @@
+.getStarted {
+    padding: 120px 0;
+    .getStarted__content {
+        margin: 0 $mg-5;
+        display: flex;
+        height: 244px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: url("../img/banner/getStarted_1440-cta2x.jpg") center/cover no-repeat;
+        .getStarted__items {
+            &>h3 {
+                @include styleText($color-black-0, $fs-4 + 2, $fw-3);
+                padding-bottom: $pd-0 - 2;
+            }
+            &>p {
+                padding: $pd-0 - 2 0 $pd-5 + 2;
+            }
+        }
+    }
+}

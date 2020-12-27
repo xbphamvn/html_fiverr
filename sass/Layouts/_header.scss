@@ -1,0 +1,195 @@
+.header__bgColor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 70;
+    height: 80px;
+    width: 100%;
+    background-color: $color-white-0;
+    border-bottom: 1px solid $color-gray-4;
+    transition: all .5s;
+}
+
+.header__content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 71;
+    height: 80px;
+    width: 100%;
+    padding: 0 $pd-5;
+    margin: 0;
+    align-items: center;
+    .header__navbar {
+        .navbar-toggler {
+            padding: 0;
+            border-color: transparent;
+        }
+    }
+    .header__logo {
+        svg {
+            vertical-align: top;
+            fill: $color-black-4;
+        }
+    }
+    .header__form-search {
+        transition: all 0.5s;
+        @include styleSearchForm($border-radius-0, $form-height-0, $pd-0, $pd-5 - 2, $border-radius-1, $fs-1 - 1, $pd-0, $border-radius-1, $pd-3, $fs-1 - 1);
+        width: 90%;
+    }
+    .header__right {
+        text-align: right;
+        .header__right--links {
+            @include styleText($color-black-1, $fs-0, $fw-3);
+            fill: $color-black-1;
+            text-decoration: none;
+            margin: 0 $mg-3;
+            transition: all 0.5s;
+            &.fiverrPro {
+                color: $color-green-2;
+            }
+            &.plus-icon {
+                margin-left: $mg-5;
+            }
+            &:hover {
+                color: $color-green-0;
+                fill: $color-green-0;
+            }
+        }
+        .local-setting {
+            display: inline;
+        }
+    }
+}
+
+.header__categories {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    z-index: 72;
+    transition: transform .3s, all .5s;
+    background-color: $color-white-0;
+    .header__categories--items {
+        margin: 0 $mg-5;
+        justify-content: space-between;
+        .header__links {
+            padding: $pd-0 0;
+            line-height: 24px;
+            margin-bottom: 0;
+            position: relative;
+            &>a {
+                text-decoration: none;
+                color: $color-gray-9;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 3px;
+                width: 0;
+                background-color: $color-green-0;
+                transition: all .5s;
+            }
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    hr {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1160px) {
+    .header__navbar {
+        padding: 0;
+        .navbar-toggler {
+            display: none;
+            height: 0;
+            width: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    .header__navbar {
+        padding-left: 0;
+    }
+    .header__content {
+        .header__form-search {
+            .input-group {
+                margin-left: 20%;
+                .form-control {
+                    border-radius: $border-radius-1;
+                    border-right: 1px solid $color-gray-3;
+                }
+                .input-group-append {
+                    display: none;
+                }
+            }
+        }
+        .header__right {
+            .local-setting {
+                display: none;
+            }
+        }
+    }
+    .header__categories {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .header__content {
+        .header__right {
+            .fiverrPro {
+                display: none;
+            }
+            .header__right--links:nth-of-type(2) {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .header__content {
+        .header__form-search {
+            .input-group {
+                margin-left: 25%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header__content {
+        .header__form-search {
+            display: none;
+        }
+        .header__right {
+            .header__right--links:nth-of-type(3) {
+                display: none;
+            }
+        }
+    }
+}
+@include responsive("small") {
+    .header__content {
+        .header__logo {
+            margin-left: auto;
+        }
+    }
+	.header__form-search {
+            display: none;
+        }
+        .header__right {
+            .header__right--links:nth-of-type(3) {
+                display: none;
+            }
+        }
+}

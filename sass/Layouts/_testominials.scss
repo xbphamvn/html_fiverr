@@ -1,0 +1,54 @@
+.testominials {
+    padding-top: $pd-8;
+    .testominials__content {
+        margin: 0 $mg-5;
+        @include carouselBoxShadow();
+        .testominials__video-modal {
+            position: relative;
+            max-width: 600px;
+            .testominials__video-btn {
+                @include buttonPlay();
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .testominials__detail {
+            position: relative;
+            padding: 0;
+            .testominials__detail--text {
+                padding: 50px;
+                p {
+                    font-family: Georgia,Times New Roman,serif;
+                    @include styleText($color-black-1, $fs-2, $fw-2);
+                    margin-bottom: $mg-2;
+                }
+                span {
+                    @include styleText($color-black-1, $fs-0, $fw-2);
+                }
+                img {
+                    display: block;
+                    height: 27px;
+                    width: auto;
+                    margin-top: $mg-3 - 2;
+                }
+            }
+        }
+    }
+    @include responsive("large") {
+        .testominials__content {
+            .testominials__detail{
+                .testominials__detail--text {
+                    p {
+                        font-size: 1.5vw;
+                        font-weight: $fw-2;
+                    }
+                    span {
+                        font-size: 1vw;
+                        font-weight: $fw-2;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.button--outline-join {
+    transition: all .5s;
+    @include styleButton($color-black-1, transparent, $color-black-1, $border-radius-1, $fs-1 - 1, $fw-3, $pd-0 - 1, $pd-4 - 2);
+    &:hover {
+        @include hoverButton($color-white-0, $color-green-0, $color-green-0);
+    }
+}
+
+.button--outline-search {
+    margin: 0 $mg-1 - 1;
+    transition: all .5s;
+    @include styleButton($color-black-1, transparent, $color-black-3,$border-radius-1, $fs-1 - 1, $fw-2, $pd-6 - 1, $pd-0);
+    &:hover {
+        @include hoverButton($color-black-1, $color-gray-1, $color-gray-1);
+    }
+}
+
+.button--outline-banner {
+    transition: all .5s;
+    @include styleButton($color-green-4, transparent, $color-green-4, $border-radius-2, $fs-0, $fw-3, $pd-1, $pd-4 + 4);
+    &:hover {
+        @include hoverButton($color-white-0, $color-green-4, $color-green-4);
+    }
+}
+
+.button--green {
+    transition: all .5s;
+    @include styleButton($color-white-0, $color-green-0, $color-green-0, $border-radius-2, $fs-0, $fw-3, $pd-1, $pd-4 + 4);
+    &:hover {
+        @include hoverButton($color-white-0, $color-green-1, $color-green-1);
+    }
+}
+
+.button--green-cover {
+    transition: all .5s;
+    @include styleButton($color-white-0, $color-green-0, $color-green-0, $border-radius-2, $fs-0 + 1, $fw-3, $pd-2, $pd-4 + 4);
+    &:hover {
+        @include hoverButton($color-white-0, $color-green-1, $color-green-1);
+    }
+    width: 100%;
+    margin-top: $mg-3 + 2;
+}
+

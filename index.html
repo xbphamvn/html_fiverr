@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiverr Clone by XB Pham</title>
+    <!-- GOOGLE FONTS -->
+
+    <!-- FONTS AWESOME CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <!-- BOOTSTRAP V4.5 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- OWL CAROUSEL CSS -->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./img/favicon.ico" />
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header__bgColor backToTop js-bg-top"></div>
+        <div class="row header__content">
+            <nav class="navbar header__navbar d-xl-none navbar-expand-xl navbar-light bg-none">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#fiverrDemo"
+                    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="fiverrDemo">
+                    <a class="navbar-brand" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="84" height="24" viewBox="0 0 84 24">
+                            <path
+                                d="M16.7 5.3C18.1 5.3 19.3 4.1 19.3 2.7 19.3 1.2 18.1 0 16.7 0 15.3 0 14.1 1.2 14.1 2.7 14.1 4.1 15.3 5.3 16.7 5.3"
+                                id="Fill-6"></path>
+                            <path
+                                d="M19.4 7L7.5 7 7.5 6.3C7.5 4.7 9.1 4.7 9.8 4.7 10.7 4.7 11.1 4.8 11.1 4.8L11.1 0.5C11.1 0.5 10.3 0.3 9.2 0.3 6.8 0.3 2.2 1 2.2 6.4L2.2 7 0 7 0 11 2.2 11 2.2 19.4 0.2 19.4 0.2 23.4 9.9 23.4 9.9 19.4 7.5 19.4 7.5 11 14 11 14 19.4 12 19.4 12 23.4 21.4 23.4 21.4 19.4 19.4 19.4 19.4 7Z"
+                                id="Fill-8"></path>
+                            <path
+                                d="M39.6 7L31.1 7 31.1 11 32.5 11 30.7 16.9C30.3 17.9 30.2 19.1 30.2 19.1L30.1 19.1C30.1 19.1 30 17.9 29.7 16.9L27.9 11 29.3 11 29.3 7 20.8 7 20.8 11 22.6 11 27 23.4 33.3 23.4 37.8 11 39.6 11 39.6 7Z"
+                                id="Fill-10"></path>
+                            <path
+                                d="M45.2 13.2C45.4 11.9 46.2 10.8 47.7 10.8 48.9 10.8 49.8 11.9 49.8 13.2L45.2 13.2ZM55.3 14.6C55.3 10 52.6 6.7 47.9 6.7 42.7 6.7 39.6 10.4 39.6 15.2 39.6 19.5 42.6 23.7 48.3 23.7 52.6 23.7 55.2 21.5 55.2 21.5L53.3 17.7C53.3 17.7 51.1 19.2 48.8 19.2 47.1 19.2 45.4 18.3 45 16.2L55.2 16.2C55.2 16.2 55.3 15.1 55.3 14.6Z"
+                                id="Fill-12"></path>
+                            <path
+                                d="M78.1 10.8L78 10.8C78 10.8 78.1 10.5 78.1 10L78.1 9.1C78.1 7.7 77.3 7 75.8 7L70.8 7 70.8 11 72.2 11C72.7 11 72.9 11.3 72.9 11.7L72.9 19.4 70.8 19.4 70.8 23.4 80.5 23.4 80.5 19.4 78.3 19.4 78.3 17C78.3 14.1 79.7 12.1 82.7 12.1 83.4 12.1 83.8 12.2 83.8 12.2L83.8 6.8C83.8 6.8 83.5 6.8 83.2 6.8 80.8 6.8 78.8 8.6 78.1 10.8"
+                                id="Fill-14"></path>
+                            <path
+                                d="M63.8 10.8L63.8 10.8C63.8 10.8 63.8 10.5 63.8 10L63.8 9.1C63.8 7.7 63 7 61.6 7L56.5 7 56.5 11 58 11C58.4 11 58.7 11.3 58.7 11.7L58.7 19.4 56.5 19.4 56.5 23.4 66.2 23.4 66.2 19.4 64.1 19.4 64.1 17C64.1 14.1 65.5 12.1 68.5 12.1 69.1 12.1 69.6 12.2 69.6 12.2L69.6 6.8C69.6 6.8 69.2 6.8 68.9 6.8 66.5 6.8 64.5 8.6 63.8 10.8"
+                                id="Fill-16"></path>
+                        </svg>
+                    </a>
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="col-6 col-sm-2 col-md-1 col-lg-1 px-0">
+                <div class="header__logo">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="84" height="24" viewBox="0 0 84 24">
+                            <path
+                                d="M16.7 5.3C18.1 5.3 19.3 4.1 19.3 2.7 19.3 1.2 18.1 0 16.7 0 15.3 0 14.1 1.2 14.1 2.7 14.1 4.1 15.3 5.3 16.7 5.3"
+                                id="Fill-6"></path>
+                            <path
+                                d="M19.4 7L7.5 7 7.5 6.3C7.5 4.7 9.1 4.7 9.8 4.7 10.7 4.7 11.1 4.8 11.1 4.8L11.1 0.5C11.1 0.5 10.3 0.3 9.2 0.3 6.8 0.3 2.2 1 2.2 6.4L2.2 7 0 7 0 11 2.2 11 2.2 19.4 0.2 19.4 0.2 23.4 9.9 23.4 9.9 19.4 7.5 19.4 7.5 11 14 11 14 19.4 12 19.4 12 23.4 21.4 23.4 21.4 19.4 19.4 19.4 19.4 7Z"
+                                id="Fill-8"></path>
+                            <path
+                                d="M39.6 7L31.1 7 31.1 11 32.5 11 30.7 16.9C30.3 17.9 30.2 19.1 30.2 19.1L30.1 19.1C30.1 19.1 30 17.9 29.7 16.9L27.9 11 29.3 11 29.3 7 20.8 7 20.8 11 22.6 11 27 23.4 33.3 23.4 37.8 11 39.6 11 39.6 7Z"
+                                id="Fill-10"></path>
+                            <path
+                                d="M45.2 13.2C45.4 11.9 46.2 10.8 47.7 10.8 48.9 10.8 49.8 11.9 49.8 13.2L45.2 13.2ZM55.3 14.6C55.3 10 52.6 6.7 47.9 6.7 42.7 6.7 39.6 10.4 39.6 15.2 39.6 19.5 42.6 23.7 48.3 23.7 52.6 23.7 55.2 21.5 55.2 21.5L53.3 17.7C53.3 17.7 51.1 19.2 48.8 19.2 47.1 19.2 45.4 18.3 45 16.2L55.2 16.2C55.2 16.2 55.3 15.1 55.3 14.6Z"
+                                id="Fill-12"></path>
+                            <path
+                                d="M78.1 10.8L78 10.8C78 10.8 78.1 10.5 78.1 10L78.1 9.1C78.1 7.7 77.3 7 75.8 7L70.8 7 70.8 11 72.2 11C72.7 11 72.9 11.3 72.9 11.7L72.9 19.4 70.8 19.4 70.8 23.4 80.5 23.4 80.5 19.4 78.3 19.4 78.3 17C78.3 14.1 79.7 12.1 82.7 12.1 83.4 12.1 83.8 12.2 83.8 12.2L83.8 6.8C83.8 6.8 83.5 6.8 83.2 6.8 80.8 6.8 78.8 8.6 78.1 10.8"
+                                id="Fill-14"></path>
+                            <path
+                                d="M63.8 10.8L63.8 10.8C63.8 10.8 63.8 10.5 63.8 10L63.8 9.1C63.8 7.7 63 7 61.6 7L56.5 7 56.5 11 58 11C58.4 11 58.7 11.3 58.7 11.7L58.7 19.4 56.5 19.4 56.5 23.4 66.2 23.4 66.2 19.4 64.1 19.4 64.1 17C64.1 14.1 65.5 12.1 68.5 12.1 69.1 12.1 69.6 12.2 69.6 12.2L69.6 6.8C69.6 6.8 69.2 6.8 68.9 6.8 66.5 6.8 64.5 8.6 63.8 10.8"
+                                id="Fill-16"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="col-1 col-sm-4 col-md-3 col-lg-4 px-0">
+                <form class="header__form-search backToTop js-cd-top">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Find Services">
+                        <div class="form-search--icon">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                                Search
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col px-0">
+                <div class="header__right">
+                    <a class="header__right--links fiverrPro" href="#">
+                        <span>Fiverr Pro</span>
+                    </a>
+                    <div class="local-setting">
+                        <a class="header__right--links" href="#">
+                            <span>
+                                <svg width="18" height="18" viewBox="1 1 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9 1C4.58875 1 1 4.58875 1 9C1 13.4113 4.58875 17 9 17C13.4113 17 17 13.4113 17 9C17 4.58875 13.4113 1 9 1ZM8.53125 4.92676C7.81812 4.89612 7.11218 4.7959 6.43811 4.63293C6.54578 4.37781 6.6626 4.13281 6.78857 3.90063C7.30542 2.94824 7.93994 2.27991 8.53125 2.03784V4.92676ZM8.53125 5.86499V8.53125H5.60339C5.64465 7.4906 5.82202 6.45752 6.11536 5.51782C6.8927 5.71362 7.70874 5.83215 8.53125 5.86499ZM8.53125 9.46875V12.135C7.70874 12.1678 6.8927 12.2864 6.11536 12.4822C5.82202 11.5425 5.64465 10.5094 5.60339 9.46875H8.53125ZM8.53125 13.0732V15.9622C7.93994 15.7201 7.30542 15.0518 6.78857 14.0994C6.6626 13.8672 6.54578 13.6222 6.43811 13.3671C7.11218 13.2041 7.81799 13.1039 8.53125 13.0732ZM9.46875 13.0732C10.1819 13.1039 10.8878 13.2041 11.5619 13.3671C11.4542 13.6222 11.3374 13.8672 11.2114 14.0994C10.6946 15.0518 10.0601 15.7201 9.46875 15.9622V13.0732ZM9.46875 12.135V9.46875H12.3966C12.3553 10.5094 12.178 11.5425 11.8846 12.4822C11.1073 12.2864 10.2913 12.1678 9.46875 12.135ZM9.46875 8.53125V5.86499C10.2913 5.83215 11.1073 5.71362 11.8846 5.51782C12.178 6.45752 12.3553 7.4906 12.3966 8.53125H9.46875ZM9.46875 4.92676V2.03784C10.0601 2.27991 10.6946 2.94824 11.2114 3.90063C11.3374 4.13281 11.4542 4.37781 11.5619 4.63293C10.8878 4.7959 10.1819 4.89612 9.46875 4.92676ZM12.0354 3.45349C11.8007 3.02087 11.5457 2.63953 11.2769 2.31421C12.2141 2.63428 13.0631 3.14636 13.7771 3.8031C13.3699 4.02124 12.931 4.21069 12.4694 4.36902C12.3384 4.0509 12.1936 3.74487 12.0354 3.45349ZM5.9646 3.45349C5.8064 3.74487 5.66162 4.0509 5.53064 4.36902C5.06897 4.21069 4.63013 4.02112 4.2229 3.8031C4.93689 3.14636 5.78589 2.63428 6.72314 2.31421C6.45435 2.63953 6.19946 3.02075 5.9646 3.45349ZM5.2135 5.25012C4.89355 6.27368 4.70544 7.38953 4.66492 8.53125H1.95349C2.05383 7.00769 2.63892 5.61438 3.5564 4.50525C4.06555 4.79724 4.62317 5.047 5.2135 5.25012ZM4.66492 9.46875C4.70544 10.6106 4.89355 11.7263 5.2135 12.7499C4.62317 12.953 4.06555 13.2028 3.5564 13.4948C2.63892 12.3856 2.05383 10.9923 1.95349 9.46875H4.66492ZM5.53064 13.631C5.66162 13.9491 5.8064 14.2551 5.9646 14.5465C6.19946 14.9791 6.45435 15.3605 6.72314 15.6858C5.78589 15.3657 4.93689 14.8536 4.22302 14.1969C4.63 13.9789 5.06897 13.7893 5.53064 13.631ZM12.0354 14.5465C12.1936 14.2551 12.3384 13.9491 12.4694 13.631C12.931 13.7893 13.3699 13.9789 13.7771 14.1969C13.0631 14.8536 12.2141 15.3657 11.2769 15.6858C11.5457 15.3605 11.8005 14.9792 12.0354 14.5465ZM12.7865 12.7499C13.1064 11.7263 13.2946 10.6105 13.3351 9.46875H16.0465C15.9462 10.9923 15.3611 12.3856 14.4436 13.4948C13.9344 13.2028 13.3768 12.953 12.7865 12.7499ZM13.3351 8.53125C13.2946 7.3894 13.1064 6.27368 12.7865 5.25012C13.3768 5.047 13.9344 4.79724 14.4436 4.50525C15.3611 5.61438 15.9462 7.00769 16.0465 8.53125H13.3351Z"
+                                        stroke-width="0.2"></path>
+                                </svg>
+                                English
+                            </span>
+                        </a>
+                        <a class="header__right--links" href="#">
+                            <span>$USD</span>
+                        </a>
+                    </div>
+                    <a class="header__right--links" href="#">
+                        <span>Become a Seller</span>
+                    </a>
+                    <a class="header__right--links" href="#">
+                        <span>Sign In</span>
+                    </a>
+                    <a class="header__right--links" href="#">
+                        <button class="button button--outline-join backToTopButton js-scroll-btn">Join</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header__categories additionalCategories js-add-categories">
+            <div class="row header__categories--items">
+                <p class="header__links"><a href="#">Graphics & Design</a></p>
+                <p class="header__links"><a href="#">Digital Marketing</a></p>
+                <p class="header__links"><a href="#">Writing & Translation</a></p>
+                <p class="header__links"><a href="#">Video & Animation</a></p>
+                <p class="header__links"><a href="#">Music & Audio</a></p>
+                <p class="header__links"><a href="#">Programming & Tech</a></p>
+                <p class="header__links"><a href="#">Business</a></p>
+                <p class="header__links"><a href="#">Lifestyle</a></p>
+                <p class="header__links"><a href="#">Industries</a></p>
+            </div>
+            <hr>
+        </div>
+    </header>
+
+    <!-- COVER -->
+    <section class="cover">
+        <div class="cover__carousel--bg"></div>
+        <div class="cover__carousel">
+            <div class="carousel" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img/cover_team/900-darren2x.png" class="d-block w-100" alt="First slide">
+                        <div class="carousel-item__caption container text-white">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <p>
+                                Darren, <span>Designer and Animator</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/cover_team/900-matthew2x.png" class="d-block w-100" alt="Second slide">
+                        <div class="carousel-item__caption container text-white">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <p>
+                                Nichelle, <span>Social Media Strategist</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/cover_team/900-melissa2x.png" class="d-block w-100" alt="Second slide">
+                        <div class="carousel-item__caption container text-white">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <p>
+                                Melissa, <span>Social Media Marketer</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/cover_team/900-nichelle2x.png" class="d-block w-100" alt="Second slide">
+                        <div class="carousel-item__caption container text-white">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <p>
+                                Nichelle, <span>Social Media Strategist</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/cover_team/900-sharon2x.png" class="d-block w-100" alt="Second slide">
+                        <div class="carousel-item__caption container text-white">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <p>
+                                Sharon, <span>Marketing Expert</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/cover_team/900-tobee2x.png" class="d-block w-100" alt="Second slide">
+                        <div class="carousel-item__caption container text-white">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <p>
+                                Nichelle, <span>Social Media Strategist</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cover__content">
+            <h1>Find the perfect freelance services for your business</h1>
+            <form class="cover__search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Try &quot;building mobile app&quot;">
+                    <div class="form-search--icon">
+                        <i class="fa fa-search"></i>
+                    </div>
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">
+                            Search
+                        </span>
+                    </div>
+                </div>
+                <div class="cover__popular">
+                    <span class="cover__popular--bold">Popular:</span>
+                    <button class="button--outline-search mt-2">Website Building</button>
+                    <button class="button--outline-search mt-2">Wordpress</button>
+                    <button class="button--outline-search mt-2">Logo Design</button>
+                    <button class="button--outline-search mt-2">Drop shipping</button>
+                </div>
+                <div class="cover__smallScreen--btn">
+                    <button class="button--green-cover">Search</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro">
+        <div class="intro__content">
+            <div class="intro_imgs">
+                <div class="intro__items">
+                    <img src="./img/intro_partners/facebook.png" alt="facebook">
+                </div>
+                <div class="intro__items">
+                    <img src="./img/intro_partners/google.png" alt="google">
+                </div>
+                <div class="intro__items">
+                    <img src="./img/intro_partners/mit.png" alt="mit">
+                </div>
+                <div class="intro__items">
+                    <img src="./img/intro_partners/netflix.png" alt="netflix">
+                </div>
+                <div class="intro__items">
+                    <img src="./img/intro_partners/paypal.png" alt="paypal">
+                </div>
+                <div class="intro__items">
+                    <img src="./img/intro_partners/intuit.png" alt="intuit">
+                </div>
+                <div class="intro__items">
+                    <img src="./img/intro_partners/pandg.png" alt="P&G">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services">
+        <div class="services__content">
+            <h2>Popular professional services</h2>
+            <div class="services__cards">
+                <div class="owl-carousel owl-theme services__carousel">
+                    <div class="card--services">
+                        <div class="card__img">
+                            <img src="./img/services/logodesign@2x.jpg" alt="logodesign">
+                        </div>
+                        <div class="card__text">
+                            <p class="mb-0">Build Your Brand</p>
+                            <h4>Logo Design</h4>
+                        </div>
+                    </div>
+                    <div class="card--services">
+                        <div class="card__img">
+                            <img src="./img/services/wordpress@2x.jpg" alt="logodesign">
+                        </div>
+                        <div class="card__text">
+                            <p class="mb-0">Customize your site</p>
+                            <h4>Wordpress</h4>
+                        </div>
+                    </div>
+                    <div class="card--services">
+                        <div class="card__img">
+                            <img src="./img/services/voiceover@2x.jpg" alt="logodesign">
+                        </div>
+                        <div class="card__text">
+                            <p class="mb-0">Build Your Brand</p>
+                            <h4>Logo Design</h4>
+                        </div>
+                    </div>
+                    <div class="card--services">
+                        <div class="card__img">
+                            <img src="./img/services/whiteboard@2x.jpg" alt="logodesign">
+                        </div>
+                        <div class="card__text">
+                            <p class="mb-0">Build Your Brand</p>
+                            <h4>Logo Design</h4>
+                        </div>
+                    </div>
+                    <div class="card--services">
+                        <div class="card__img">
+                            <img src="./img/services/social@2x.jpg" alt="logodesign">
+                        </div>
+                        <div class="card__text">
+                            <p class="mb-0">Build Your Brand</p>
+                            <h4>Logo Design</h4>
+                        </div>
+                    </div>
+                    <div class="card--services">
+                        <div class="card__img">
+                            <img src="./img/services/seo@2x.jpg" alt="logodesign">
+                        </div>
+                        <div class="card__text">
+                            <p class="mb-0">Build Your Brand</p>
+                            <h4>Logo Design</h4>
+                        </div>
+                    </div>
+                    <div class="card--services">
+                        <div class="card__img">
+                            <img src="./img/services/illustration2x.jpg" alt="logodesign">
+                        </div>
+                        <div class="card__text">
+                            <p class="mb-0">Build Your Brand</p>
+                            <h4>Logo Design</h4>
+                        </div>
+                    </div>
+                    <div class="card--services">
+                        <div class="card__img">
+                            <img src="./img/services/translation2x.jpg" alt="logodesign">
+                        </div>
+                        <div class="card__text">
+                            <p class="mb-0">Build Your Brand</p>
+                            <h4>Logo Design</h4>
+                        </div>
+                    </div>
+                    <div class="card--services">
+                        <div class="card__img">
+                            <img src="./img/services/data-entry2x.jpg" alt="logodesign">
+                        </div>
+                        <div class="card__text">
+                            <p class="mb-0">Build Your Brand</p>
+                            <h4>Logo Design</h4>
+                        </div>
+                    </div>
+                    <div class="card--services">
+                        <div class="card__img">
+                            <img src="./img/services/books2x.jpg" alt="logodesign">
+                        </div>
+                        <div class="card__text">
+                            <p class="mb-0">Build Your Brand</p>
+                            <h4>Logo Design</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GET WORK DONE -->
+    <section class="getWork">
+        <div class="listAndImg__content">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <h2>Get work done faster, with confidence</h2>
+                    <div class="listAndImg__items">
+                        <p class="listAndImg__icon">
+                            <i class="fa fa-check"></i>
+                        </p>
+                        <h3>Payment protection, guaranteed</h3>
+                        <p>Payment is released to the freelancer once you’re pleased and approve the work you get.</p>
+                    </div>
+                    <div class="listAndImg__items">
+                        <p class="listAndImg__icon">
+                            <i class="fa fa-check"></i>
+                        </p>
+                        <h3>Know the price up front</h3>
+                        <p>Find any service within minutes and know exactly what you’ll pay. No hourly rates, just a
+                            fixed price.</p>
+                    </div>
+                    <div class="listAndImg__items">
+                        <p class="listAndImg__icon">
+                            <i class="fa fa-check"></i>
+                        </p>
+                        <h3>We’re here for you 24/7</h3>
+                        <p>Reach out to us at any time! We have your back, from answering your questions to resolving
+                            issues.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 text-lg-center text-xl-right">
+                    <div class="listAndImg__video-modal">
+                        <img class="img-fluid" src="./img/getWork/1400-selling-proposition-2x.png" alt="Get work play">
+                        <div class="listAndImg__video-btn">
+                            <i class="fa fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARKETPLACE -->
+    <section class="marketplace">
+        <div class="marketplace__content">
+            <h2>Explore the marketplace</h2>
+            <div class="row marketplace__detail">
+                <div class="col-6 col-lg-3 marketplace__items">
+                    <a class="marketplace__link" href="#">
+                        <div class="marketplace__icon">
+                            <img src="./img/marketplace/graphics-design.svg" alt="graphics">
+                        </div>
+                        <p>Graphics & Design</p>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-3 marketplace__items">
+                    <a class="marketplace__link" href="#">
+                        <div class="marketplace__icon">
+                            <img src="./img/marketplace/online-marketing.svg" alt="marketing">
+                        </div>
+                        <p>Digital Marketing</p>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-3 marketplace__items">
+                    <a class="marketplace__link" href="#">
+                        <div class="marketplace__icon">
+                            <img src="./img/marketplace/writing-translation.svg" alt="writing">
+                        </div>
+                        <p>Writing & Translation</p>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-3 marketplace__items">
+                    <a class="marketplace__link" href="#">
+                        <div class="marketplace__icon">
+                            <img src="./img/marketplace/video-animation.svg" alt="video">
+                        </div>
+                        <p>Video & Animation</p>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-3 marketplace__items">
+                    <a class="marketplace__link" href="#">
+                        <div class="marketplace__icon">
+                            <img src="./img/marketplace/music-audio.svg" alt="music">
+                        </div>
+                        <p>Music & Audio</p>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-3 marketplace__items">
+                    <a class="marketplace__link" href="#">
+                        <div class="marketplace__icon">
+                            <img src="./img/marketplace/programming.svg" alt="programming">
+                        </div>
+                        <p>Programming & Tech</p>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-3 marketplace__items">
+                    <a class="marketplace__link" href="#">
+                        <div class="marketplace__icon">
+                            <img src="./img/marketplace/business.svg" alt="business">
+                        </div>
+                        <p>Business</p>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-3 marketplace__items">
+                    <a class="marketplace__link" href="#">
+                        <div class="marketplace__icon">
+                            <img src="./img/marketplace/lifestyle.svg" alt="lifestyle">
+                        </div>
+                        <p>Lifestyle</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects">
+        <div class="projects__content">
+            <div class="row projects__title">
+                <h2>Get inspired with projects made by our freelancers</h2>
+                <a href="#">See More Porjects <i class="fa fa-angle-right"></i></a>
+            </div>
+            <div class="projects__cards">
+                <div class="owl-carousel owl-theme projects__carousel">
+                    <div class="card--projects">
+                        <img class="project__card--img" src="./img/projects/projects_mijalzagier.png" class="img-fluid"
+                            alt="logodesign">
+                        <div class="card__profile">
+                            <a href="#">
+                                <img src="./img/projects/avatar_mijal.jpg" alt="">
+                            </a>
+                            <a class="card__text" href="#">
+                                <h5 class="mb-0">Packaging Design</h5>
+                                <p class="mb-0">by <span>mijalzagier</span></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card--projects">
+                        <img class="project__card--img" src="./img/projects/projects_artsi3d.png" class="img-fluid"
+                            alt="logodesign">
+                        <div class="card__profile">
+                            <a href="#">
+                                <img src="./img/projects/avatar_art.jpg" alt="">
+                            </a>
+                            <a class="card__text" href="#">
+                                <h5 class="mb-0">Flyer Design</h5>
+                                <p class="mb-0">by <span>spickex</span></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card--projects">
+                        <img class="project__card--img" src="./img/projects/projects_carmelacaldart0.jpg"
+                            class="img-fluid" alt="logodesign">
+                        <div class="card__profile">
+                            <a href="#">
+                                <img src="./img/projects/avatar_carmel.jpg" alt="">
+                            </a>
+                            <a class="card__text" href="#">
+                                <h5 class="mb-0">Packaging Design</h5>
+                                <p class="mb-0">by <span>mijalzagier</span></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card--projects">
+                        <img class="project__card--img" src="./img/projects/projects_designerheather.jpg"
+                            class="img-fluid" alt="logodesign">
+                        <div class="card__profile">
+                            <a href="#">
+                                <img src="./img/projects/avatar_paud.jpg" alt="">
+                            </a>
+                            <a class="card__text" href="#">
+                                <h5 class="mb-0">Packaging Design</h5>
+                                <p class="mb-0">by <span>mijalzagier</span></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card--projects">
+                        <img class="project__card--img" src="./img/projects/projects_digitalgeria.jpg" class="img-fluid"
+                            alt="logodesign">
+                        <div class="card__profile">
+                            <a href="#">
+                                <img src="./img/projects/avatar_digital.png" alt="">
+                            </a>
+                            <a class="card__text" href="#">
+                                <h5 class="mb-0">Packaging Design</h5>
+                                <p class="mb-0">by <span>mijalzagier</span></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card--projects">
+                        <img class="project__card--img" src="./img/projects/projects_dvincentgomes.jpg"
+                            class="img-fluid" alt="logodesign">
+                        <div class="card__profile">
+                            <a href="#">
+                                <img src="./img/projects/avatar_dvin.jpg" alt="">
+                            </a>
+                            <a class="card__text" href="#">
+                                <h5 class="mb-0">Packaging Design</h5>
+                                <p class="mb-0">by <span>mijalzagier</span></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card--projects">
+                        <img class="project__card--img" src="./img/projects/projects_evelinaro.png" class="img-fluid"
+                            alt="logodesign">
+                        <div class="card__profile">
+                            <a href="#">
+                                <img src="./img/projects/avatar_evil.jpeg" alt="">
+                            </a>
+                            <a class="card__text" href="#">
+                                <h5 class="mb-0">Packaging Design</h5>
+                                <p class="mb-0">by <span>mijalzagier</span></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTOMINIALS -->
+    <section class="testominials">
+        <div class="testominials__content">
+            <div class="owl-carousel owl-theme testominials__carousel">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="testominials__video-modal mx-auto p-sm-3 p-lg-0">
+                            <img class="img-fluid" src="./img/testominials/1440-haerfest-2x.jpg" alt="haerfest-2x">
+                            <div class="testominials__video-btn">
+                                <i class="fa fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-sm-0 pt-lg-1 testominials__detail">
+                        <div class="testominials__detail--text">
+                            <p>
+                                &quot;Being a small but growing brand, we have to definitely do a lot more with less.
+                                And when you want to create a business bigger than yourself, you’re going to need help.
+                                And that’s what Fiverr does&quot;
+                            </p>
+                            <span>Tim and Dan Joo, Co-founders</span>
+                            <img src="./img/testominials/haerfest-logo.png" alt="haerfest">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="testominials__video-modal mx-auto p-sm-3 p-lg-0">
+                            <img class="img-fluid" src="./img/testominials/1440-appsflyer-2x.jpg" alt="haerfest-2x">
+                            <div class="testominials__video-btn">
+                                <i class="fa fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-sm-0 pt-lg-1 testominials__detail">
+                        <div class="testominials__detail--text">
+                            <p>
+                                &quot;When I use Fiverr, I don’t have to go through the hassle of contracts,
+                                negotiations, logistics and financials. Fiverr takes away the risk of working with the
+                                wrong freelancer.&quot;
+                            </p>
+                            <span>Karen Cohen, Global Product Marketing Manager</span>
+                            <img src="./img/testominials/appsflyer-logo.png" alt="haerfest">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MIDHOMEPAGE BANNER -->
+    <section class="midhomeBanner">
+        <div class="midhomeBanner__content">
+            <div class="midhomeBanner__items">
+                <p class="midhomeBanner__fiverrPro">Try</p>
+                <h3>Unrivaled experts, trusted by the world's biggest brands</h3>
+                <button class="button--outline-banner">Explore Pro Services</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section class="tools">
+        <div class="listAndImg__content">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <h2>Give your business the right tools</h2>
+                    <div class="listAndImg__items">
+                        <p class="listAndImg__icon">
+                            <i class="fa fa-check"></i>
+                        </p>
+                        <h3>Full transparency</h3>
+                        <p>A new shared dashboard allows you to track your team's activity, so that everyone is always
+                            in sync.</p>
+                    </div>
+                    <div class="listAndImg__items">
+                        <p class="listAndImg__icon">
+                            <i class="fa fa-check"></i>
+                        </p>
+                        <h3>VIP customer support</h3>
+                        <p>Quick response time and upgraded support solutions will help you to get what you need, when
+                            you need it.</p>
+                    </div>
+                    <div class="listAndImg__items">
+                        <p class="listAndImg__icon">
+                            <i class="fa fa-check"></i>
+                        </p>
+                        <h3>Improved billing options</h3>
+                        <p>One team - one payment method. You can now add a card on file that every team member can use.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 text-lg-center text-xl-right">
+                    <div class="listAndImg__video-modal">
+                        <img src="./img/tools/ipadX2.gif" alt="Tools play">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUIDES -->
+    <section class="fiverrguides">
+        <div class="fiverrguides__content">
+            <div class="row fiverrguides__title">
+                <h2>Fiverr guides</h2>
+                <a href="#">See More Guides <i class="fa fa-angle-right"></i></a>
+            </div>
+            <div class="row fiverrguides__detail">
+                <div class="col-12 col-xl-4 fiverrguides__items">
+                    <a href="#">
+                        <img class="img-fluid" src="./img/fiverrguides/1440-create-website-2x.jpg" alt="create web">
+                        <h5>Start an online business and work from home</h5>
+                        <p>A complete guide to starting a small business online</p>
+                    </a>
+                </div>
+                <div class="col-12 col-xl-4 fiverrguides__items">
+                    <a href="#">
+                        <img class="img-fluid" src="./img/fiverrguides/1440-digital-marketing-2x.jpg"
+                            alt="digital-marketing">
+                        <h5>Digital marketing made easy</h5>
+                        <p>A practical guide to understand what is digital marketing</p>
+                    </a>
+                </div>
+                <div class="col-12 col-xl-4 fiverrguides__items">
+                    <a href="#">
+                        <img class="img-fluid" src="./img/fiverrguides/1440-strong-brand-2x.jpg" alt="strong brand">
+                        <h5>Create a logo for your business</h5>
+                        <p>A step-by-step guide to create a memorable business logo</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GET STARTED -->
+    <section class="getStarted">
+        <div class="getStarted__content">
+            <div class="getStarted__items">
+                <h3>Find freelance services for your business today</h3>
+                <p>We've got you covered for all your business needs</p>
+                <button class="button--green">Get Started</button>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer">
+            <div class="row footer__top">
+                <div class="col-12 col-md-6 col-lg footer__top--items">
+                    <p>Categories</p>
+                    <p class="footer__links"><a href="#">Graphics & Design</a></p>
+                    <p class="footer__links"><a href="#">Digital Marketing</a></p>
+                    <p class="footer__links"><a href="#">Writing & Translation</a></p>
+                    <p class="footer__links"><a href="#">Video & Animation</a></p>
+                    <p class="footer__links"><a href="#">Music & Audio</a></p>
+                    <p class="footer__links"><a href="#">Programming & Tech</a></p>
+                    <p class="footer__links"><a href="#">Business</a></p>
+                    <p class="footer__links"><a href="#">Lifestyle</a></p>
+                    <p class="footer__links"><a href="#">Sitemap</a></p>
+                </div>
+                <div class="col-12 col-md-6 col-lg footer__top--items">
+                    <p>About</p>
+                    <p class="footer__links"><a href="#">Careers</a></p>
+                    <p class="footer__links"><a href="#">Press & News</a></p>
+                    <p class="footer__links"><a href="#">Partnerships</a></p>
+                    <p class="footer__links"><a href="#">Privacy Policy</a></p>
+                    <p class="footer__links"><a href="#">Terms of Service</a></p>
+                    <p class="footer__links"><a href="#">Intellectual Property Claims</a></p>
+                    <p class="footer__links"><a href="#">Investor Relations</a></p>
+                </div>
+                <div class="col-12 col-md-6 col-lg footer__top--items">
+                    <p>Support</p>
+                    <p class="footer__links"><a href="#">Help & Support</a></p>
+                    <p class="footer__links"><a href="#">Trust & Safety</a></p>
+                    <p class="footer__links"><a href="#">Selling on Fiverr</a></p>
+                    <p class="footer__links"><a href="#">Buying on Fiverr</a></p>
+                </div>
+                <div class="col-12 col-md-6 col-lg footer__top--items">
+                    <p>Community</p>
+                    <p class="footer__links"><a href="#">Events</a></p>
+                    <p class="footer__links"><a href="#">Blog</a></p>
+                    <p class="footer__links"><a href="#">Forum</a></p>
+                    <p class="footer__links"><a href="#">Community Standards</a></p>
+                    <p class="footer__links"><a href="#">Podcast</a></p>
+                    <p class="footer__links"><a href="#">Affiliates</a></p>
+                    <p class="footer__links"><a href="#">Invite a Friend</a></p>
+                    <p class="footer__links"><a href="#">Become a Seller</a></p>
+                    <p class="footer__links">
+                        <a href="#">
+                            Fiverr Elevate
+                            <span>Exclusive Benefits</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 col-lg footer__top--items">
+                    <p>More From Fiverr</p>
+                    <p class="footer__links"><a href="#">Fiverr Business</a></p>
+                    <p class="footer__links"><a href="#">Fiverr Pro</a></p>
+                    <p class="footer__links"><a href="#">Fiverr Studios</a></p>
+                    <p class="footer__links"><a href="#">Fiverr Logo Maker</a></p>
+                    <p class="footer__links"><a href="#">Fiverr Guides</a></p>
+                    <p class="footer__links"><a href="#">Get Inspired</a></p>
+                    <p class="footer__links">
+                        <a href="#">
+                            ClearVoice
+                            <span>Content Marketing</span>
+                        </a>
+                    </p>
+                    <p class="footer__links">
+                        <a href="#">
+                            AND CO
+                            <span>Invoice Software</span>
+                        </a>
+                    </p>
+                    <p class="footer__links">
+                        <a href="#">
+                            Learn
+                            <span>Online Courses</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="row footer__bottom">
+                <div class="col-12 col-lg-6 footer__bottom--left">
+                    <img src="./img/logo/logo_footer.svg" alt="footer logo">
+                    <span>&copy; Fiverr International Ltd. 2020</span>
+                </div>
+                <div class="col-12 col-lg-6 footer__bottom--right">
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <div class="footer__bottom--text">
+                        <a href="#">
+                            <span>
+                                <svg width="18" height="18" viewBox="1 1 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9 1C4.58875 1 1 4.58875 1 9C1 13.4113 4.58875 17 9 17C13.4113 17 17 13.4113 17 9C17 4.58875 13.4113 1 9 1ZM8.53125 4.92676C7.81812 4.89612 7.11218 4.7959 6.43811 4.63293C6.54578 4.37781 6.6626 4.13281 6.78857 3.90063C7.30542 2.94824 7.93994 2.27991 8.53125 2.03784V4.92676ZM8.53125 5.86499V8.53125H5.60339C5.64465 7.4906 5.82202 6.45752 6.11536 5.51782C6.8927 5.71362 7.70874 5.83215 8.53125 5.86499ZM8.53125 9.46875V12.135C7.70874 12.1678 6.8927 12.2864 6.11536 12.4822C5.82202 11.5425 5.64465 10.5094 5.60339 9.46875H8.53125ZM8.53125 13.0732V15.9622C7.93994 15.7201 7.30542 15.0518 6.78857 14.0994C6.6626 13.8672 6.54578 13.6222 6.43811 13.3671C7.11218 13.2041 7.81799 13.1039 8.53125 13.0732ZM9.46875 13.0732C10.1819 13.1039 10.8878 13.2041 11.5619 13.3671C11.4542 13.6222 11.3374 13.8672 11.2114 14.0994C10.6946 15.0518 10.0601 15.7201 9.46875 15.9622V13.0732ZM9.46875 12.135V9.46875H12.3966C12.3553 10.5094 12.178 11.5425 11.8846 12.4822C11.1073 12.2864 10.2913 12.1678 9.46875 12.135ZM9.46875 8.53125V5.86499C10.2913 5.83215 11.1073 5.71362 11.8846 5.51782C12.178 6.45752 12.3553 7.4906 12.3966 8.53125H9.46875ZM9.46875 4.92676V2.03784C10.0601 2.27991 10.6946 2.94824 11.2114 3.90063C11.3374 4.13281 11.4542 4.37781 11.5619 4.63293C10.8878 4.7959 10.1819 4.89612 9.46875 4.92676ZM12.0354 3.45349C11.8007 3.02087 11.5457 2.63953 11.2769 2.31421C12.2141 2.63428 13.0631 3.14636 13.7771 3.8031C13.3699 4.02124 12.931 4.21069 12.4694 4.36902C12.3384 4.0509 12.1936 3.74487 12.0354 3.45349ZM5.9646 3.45349C5.8064 3.74487 5.66162 4.0509 5.53064 4.36902C5.06897 4.21069 4.63013 4.02112 4.2229 3.8031C4.93689 3.14636 5.78589 2.63428 6.72314 2.31421C6.45435 2.63953 6.19946 3.02075 5.9646 3.45349ZM5.2135 5.25012C4.89355 6.27368 4.70544 7.38953 4.66492 8.53125H1.95349C2.05383 7.00769 2.63892 5.61438 3.5564 4.50525C4.06555 4.79724 4.62317 5.047 5.2135 5.25012ZM4.66492 9.46875C4.70544 10.6106 4.89355 11.7263 5.2135 12.7499C4.62317 12.953 4.06555 13.2028 3.5564 13.4948C2.63892 12.3856 2.05383 10.9923 1.95349 9.46875H4.66492ZM5.53064 13.631C5.66162 13.9491 5.8064 14.2551 5.9646 14.5465C6.19946 14.9791 6.45435 15.3605 6.72314 15.6858C5.78589 15.3657 4.93689 14.8536 4.22302 14.1969C4.63 13.9789 5.06897 13.7893 5.53064 13.631ZM12.0354 14.5465C12.1936 14.2551 12.3384 13.9491 12.4694 13.631C12.931 13.7893 13.3699 13.9789 13.7771 14.1969C13.0631 14.8536 12.2141 15.3657 11.2769 15.6858C11.5457 15.3605 11.8005 14.9792 12.0354 14.5465ZM12.7865 12.7499C13.1064 11.7263 13.2946 10.6105 13.3351 9.46875H16.0465C15.9462 10.9923 15.3611 12.3856 14.4436 13.4948C13.9344 13.2028 13.3768 12.953 12.7865 12.7499ZM13.3351 8.53125C13.2946 7.3894 13.1064 6.27368 12.7865 5.25012C13.3768 5.047 13.9344 4.79724 14.4436 4.50525C15.3611 5.61438 15.9462 7.00769 16.0465 8.53125H13.3351Z"
+                                        stroke-width="0.2"></path>
+                                </svg>
+                                English
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span>$USD</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <!-- Owl Carousel JS -->
+    <script src="./js/owl.carousel.min.js"></script>
+    <script>
+        $('.services__carousel').owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 2,
+                    margin: 20
+                },
+                800: {
+                    items: 3,
+                    margin: 20
+                },
+                1060: {
+                    items: 4,
+                    margin: 20
+                },
+                1240: {
+                    items: 5,
+                    margin: 20
+                }
+            }
+        })
+        $('.projects__carousel').owlCarousel({
+            loop: true,
+            margin: 15,
+            nav: true,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 2,
+                    margin: 15
+                },
+                800: {
+                    items: 3,
+                    margin: 15
+                },
+                1060: {
+                    items: 4,
+                    margin: 15
+                }
+            }
+        })
+        $('.testominials__carousel').owlCarousel({
+            loop: true,
+            margin: 15,
+            nav: true,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                }
+            }
+        })
+    </script>
+    <!-- Back To Top JS Show/Hide header effect -->
+    <script src="./js/util.js"></script>
+    <script src="./js/main-backToTop.js"></script>
+    <!-- Main JS -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
